@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="eng">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" , initial-scale="1.0" />
+    <title>Alex Coffey Portfolio Website</title>
+    
+    <!-- Normalize Browser and import FA -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css"
+      integrity="sha512-ymdTQyUk0UfVv71LHB/INBdluI7qg0WKX5Wy9DZNsYcliOVveSy42TBPcgbhm/RSsIHLj+3YlAfDL+/WgBMaIA=="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.css"
+      integrity="sha512-f73UKwzP1Oia45eqHpHwzJtFLpvULbhVpEJfaWczo/ZCV5NWSnK4vLDnjTaMps28ocZ05RbI83k2RlQH92zy7A=="
+      crossorigin="anonymous"
+    />
+
+    <!-- Fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;900&family=Source+Sans+Pro:wght@300;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <!-- Header -->
+
+  <body>
+    <header class="header">
+      <div class="logo">
+        <img src="./images/Profile Pics/Hi Circle Icon.png" alt="" />
+      </div>
+      <button class="nav-toggle" aria-label="toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="#home" class="nav__link">Home</a>
+          </li>
+          <li class="nav__item">
+            <a href="./Projects/projects.html" class="nav__link">My Projects</a>
+          </li>
+          <li class="nav__item">
+            <a href="about.html" class="nav__link">About me</a>
+          </li>
+          <li class="nav__item">
+            <a href="contacts.html" class="nav__link">Contact Me</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Introduction -->
+
+    <section class="intro" id="home">
+      <h1 class="section__title section__title--intro">
+        I'm <strong>Alex Coffey</strong>
+      </h1>
+      <p class="section__subtitle section__subtitle--intro">
+        Full-Stack Developer
+      </p>
+      <img
+        src="./images/Profile Pics/image1_alpha.png"
+        alt="Bitmoji wave"
+        class="intro__image"
+      />
+    </section>
+
+    <!-- My services -->
+
+    <!-- <section class="my-services" id="services">
+      <h2 class="section__title section__title--sercices">What I do</h2>
+      <div class="services">
+        <div class="service">
+          <h3>Design & Development</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis
+            metus vel neque posuere eleifend at et mauris. Donec luctus volutpat
+            tortor eu tempus. Nullam tempus fringilla justo, in tincidunt tellus
+            posuere nec. Maecenas finibus ex nunc, et tincidunt erat molestie
+            at. Aliquam quis eros sit amet felis vulputate accumsan. Sed nec
+            felis faucibus, tincidunt est sed, dapibus odio. Nam vitae ultrices
+            turpis. Vivamus non elit id diam congue aliquam et sed lacus.
+          </p>
+        </div>
+        <div class="service">
+          <h3>E-Comerce</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis
+            metus vel neque posuere eleifend at et mauris. Donec luctus volutpat
+            tortor eu tempus. Nullam tempus fringilla justo, in tincidunt tellus
+            posuere nec. Maecenas finibus ex nunc, et tincidunt erat molestie
+            at. Aliquam quis eros sit amet felis vulputate accumsan. Sed nec
+            felis faucibus, tincidunt est sed, dapibus odio. Nam vitae ultrices
+            turpis. Vivamus non elit id diam congue aliquam et sed lacus.
+          </p>
+        </div>
+        <div class="service">
+          <h3>WordPress</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis
+            metus vel neque posuere eleifend at et mauris. Donec luctus volutpat
+            tortor eu tempus. Nullam tempus fringilla justo, in tincidunt tellus
+            posuere nec. Maecenas finibus ex nunc, et tincidunt erat molestie
+            at. Aliquam quis eros sit amet felis vulputate accumsan. Sed nec
+            felis faucibus, tincidunt est sed, dapibus odio. Nam vitae ultrices
+            turpis. Vivamus non elit id diam congue aliquam et sed lacus.
+          </p>
+        </div>
+      </div>
+      <a href="#work" class="btn">My Work</a>
+    </section> -->
+
+    <!-- About Me-->
+<!-- 
+    <section class="about-me" id="about">
+      <h2 class="section__title section__title--about">Who I am</h2>
+      <p class="section__subtitle section__subtitle--about">
+        Software Developer
+      </p>
+
+      <div class="about-me__body">
+        <p>
+          Nullam volutpat tortor non dolor blandit bibendum. Nullam a egestas
+          ipsum. Fusce ut hendrerit arcu. Pellentesque habitant morbi tristique
+          senectus et netus et malesuada fames ac turpis egestas. Sed quis
+          consectetur sapien. Sed ullamcorper massa ut elementum malesuada. Nunc
+          quam nisl, dictum quis elit nec, sollicitudin tempor lacus. Nulla
+          facilisis felis at nisi ullamcorper, nec porttitor erat porttitor.
+          Proin tempus nisl eget rutrum vehicula.
+        </p>
+        <p>
+          Nullam volutpat tortor non dolor blandit bibendum. Nullam a egestas
+          ipsum. Fusce ut hendrerit arcu. Pellentesque habitant morbi tristique
+          senectus et netus et malesuada fames ac turpis egestas. Sed quis
+          consectetur sapien. Sed ullamcorper massa ut elementum malesuada. Nunc
+          quam nisl, dictum quis elit nec, sollicitudin tempor lacus. Nulla
+          facilisis felis at nisi ullamcorper, nec porttitor erat porttitor.
+          Proin tempus nisl eget rutrum vehicula.
+        </p>
+      </div>
+      <img src="./Climbing Pics/Boulder 38 Pic 3.jpg" alt="" />
+    </section> -->
+
+    <!-- My Work -->
+
+    <section class="my-projects" id="work">
+      <h2 class="section__title section__title-projects">My Projects</h2>
+      <p class="section__subtitle section__subtitle--projects">
+        A seclection of some of my pyojects
+      </p>
+      <div class="portfolio">
+          <!-- Portfolio item 01-->
+        <a href="./Projects/sodoku/sodoku.html" class="portfolio__item">
+          <img
+            src="./images/Project Images/Sudoku.png"
+            alt=""
+            class="portfolio__img"/>
+        </a>
+        <!-- Portfolio item 01-->
+        <a href="./Projects/sodoku/sodoku.html" class="portfolio__item">
+          <img
+            src="./images/Project Images/Sudoku.png"
+            alt=""
+            class="portfolio__img"/>
+        </a>
+        <!-- Portfolio item 01-->
+        <a href="./Projects/sodoku/sodoku.html" class="portfolio__item">
+          <img
+            src="./images/Project Images/Sudoku.png"
+            alt=""
+            class="portfolio__img"/>
+        </a>
+        <!-- Portfolio item 01-->
+        <a href="./Projects/sodoku/sodoku.html" class="portfolio__item">
+          <img
+            src="./images/Project Images/Sudoku.png"
+            alt=""
+            class="portfolio__img"/>
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+
+    <footer class="footer">
+      <ul>
+        <a 
+          href="mailto:alexcoffey24@gmail.com" 
+          class="footer__link"
+          ></i
+        >alexcoffey24@gmail.com</a>
+      </ul>
+      <ul class="social-list">
+        <li class="social-list__item">
+          <a
+            href="https://www.youtube.com/channel/UCDxmRAG97l_nUTNLt1VQGaQ" 
+            target="_blank"
+            class="social-list__link"
+            ><i class="fab fa-youtube-square"></i
+          ></a>
+        </li>
+        <li class="social-list__item">
+          <a href="https://github.com/AlexCoffey24" 
+          target='_blank' 
+          class="social-list__link"
+            ><i class="fab fa-github"></i
+          ></a>
+        </li>
+        <li class="social-list__item">
+          <a
+            href="https://linkedin.com/in/alex-coffey-362904137" 
+            target="_blank"
+            class="social-list__link"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+        </li>
+      </ul>
+    </footer>
+
+    <script src="js/index.js"></script>
+  </body>
+</html>
