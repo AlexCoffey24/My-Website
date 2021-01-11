@@ -228,7 +228,12 @@ header {
 }
 
 /* Intro Section */
-
+.intro-background {
+  background-image: url(../images/Wallpapers/Tron\ Mountain.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 0;
+}
 .intro {
   position: relative;
 }
@@ -238,10 +243,15 @@ header {
   color: black;
 }
 
+.intro__image {
+  display: none;
+}
+
 @media (min-width: 600px) {
   .intro {
     display: grid;
     width: min-content;
+    grid-column: min-content;
     margin: 0 auto;
     grid-template-areas:
       "img title"
@@ -251,8 +261,10 @@ header {
 
   .intro__image {
     grid-area: img;
-    min-width: 300px;
+    max-width: 300px;
     position: relative;
+    display: inline;
+    justify-self: end;
   }
 
   .section__subtitle--intro {
@@ -264,7 +276,21 @@ header {
     position: relative;
     left: -1.5em;
     width: calc(100% + 1.5em);
+    justify-self: start;
   }
+
+  .section__title--intro {
+    grid-area: title;
+  }
+}
+
+/* About me */
+
+.my-services {
+  background-color: var(--clr-dark);
+  background-image: url(../images/Wallpapers/nasa-planet.jpg);
+  background-size: cover;
+  color: var(--clr-light);
 }
 
 /* Projects */
