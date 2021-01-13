@@ -21,6 +21,7 @@
   --fs-h1: 3rem;
   --fs-h2: 2.25rem;
   --fs-h3: 1.25rem;
+  --fs-h4: 1.75rem;
   --fs-body: 1rem;
   --fs-tile: 2.125rem;
   --fs-button: 2em;
@@ -41,6 +42,7 @@
     --fs-h1: 5.5rem;
     --fs-h2: 3.75rem;
     --fs-h3: 1.5rem;
+    --fs-h4: 2rem;
     --fs-body: 1.125rem;
     --fs-tile: 3.2rem;
 
@@ -84,6 +86,9 @@ h2 {
 h3 {
   font-size: var(--fs-h3);
 }
+h4 {
+  font-size: var(--fs-h4);
+}
 
 /* Header */
 
@@ -94,6 +99,13 @@ header {
   padding-top: 0.25em;
 }
 
+.page__title {
+  color: var(--clr-teal-light);
+  padding-top: 25px;
+  font-size: var(--fs-h4);
+  margin: 0;
+}
+
 .logo {
   max-width: 100px;
   padding-left: 0.25em;
@@ -101,8 +113,8 @@ header {
 
 .nav {
   position: fixed;
-  background-color: rgb(116, 88, 88);
-  color: var(--clr-dark);
+  background-color: black;
+  color: var(--clr-teal-light);
   top: 0;
   bottom: 0;
   left: 0;
@@ -136,6 +148,7 @@ header {
 
 .nav-toggle {
   padding: 0.5em;
+  margin-top: 20px;
   background: transparent;
   border: 0;
   height: 3em;
