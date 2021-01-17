@@ -257,10 +257,14 @@ header {
 }
 
 /* Intro Section */
+.hidden {
+  display: none;
+}
+
 .intro-background {
-  background-image: url(../images/Wallpapers/Tron\ Mountain.jpg);
-  background-size: cover;
-  background-position: center;
+  /* background-image: url(../images/Wallpapers/Tron\ Mountain.jpg); */
+  /* background-size: cover; */
+  /* background-position: center; */
   padding: 0;
 }
 .intro {
