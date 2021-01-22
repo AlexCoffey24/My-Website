@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8" />
+  <title>A* Pathfinding</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div id="cell_key" class="cell_key">
+    <div>
+      <h1>Change cell type:</h1>
+      <div class="cell_buttons">
+        <button id="start" class="cell_button">Start</button>
+        <button id="end" class="cell_button">Finish</button>
+        <button id="barrier" class="cell_button">Wall</button>
+        <button id="random-barriers" class="cell_button">Throw Walls</button>
+        <button id="reset_cell" class="cell_button">Eraser</button>
+        <button id="clear" class="cell_button">New Grid</button>
+        <div class="dropdown">
+          <button id="algos" class="dropbtn">Choose Algorithm</button>
+          <div id="myDropdown" class="dropdown-content">
+            <button id="A*">A*</button>
+            <button id="BFS">Breadth First Search</button>
+            <button id="Dijkstra">Dijkstra's</button>
+          </div>
+        </div>
+        <button id="solve" class="cell_button">Solve</button>
+      </div>
+    </div>
+  </div>
+  <div id="canvas-container">
+    <canvas class="canvas"></canvas>
+  </div>
+  <script src="./index.js"></script>
+</body>
