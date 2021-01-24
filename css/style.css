@@ -357,16 +357,17 @@ header {
 .projects__link {
   text-decoration: none;
   color: var(--clr-light);
+  margin: auto;
+}
+
+.projects__link:hover {
+  cursor: pointer;
+  transform: scale(1.1);
 }
 
 .section__title--projects {
-  position: relative;
+  /* position: relative; */
   transition: transform 200ms ease-in-out;
-}
-
-.section__title--projects:hover {
-  cursor: pointer;
-  transform: scale(1.1);
 }
 
 .portfolio {

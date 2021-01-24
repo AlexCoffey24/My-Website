@@ -1,3 +1,18 @@
+//  Nav toggle
+const navToggle = document.querySelector(".nav-toggle");
+const navLinks = document.querySelectorAll(".nav__link");
+
+navToggle.addEventListener("click", () => {
+  document.body.classList.toggle("nav-open");
+});
+
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    document.body.classList.remove("nav-open");
+  });
+});
+
+// Main
 const canvas = document.querySelector("canvas");
 const c = canvas.getContext("2d");
 var canvas_container = document.getElementById("canvas-container");
