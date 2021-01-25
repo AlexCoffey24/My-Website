@@ -16,18 +16,19 @@ navLinks.forEach((link) => {
 const canvas = document.querySelector("canvas");
 const c = canvas.getContext("2d");
 var canvas_container = document.getElementById("canvas-container");
+var header_height = document.getElementById("header");
+var cell_key_height = document.getElementById("cell_key");
+
+canvas.height = window.innerHeight - header_height - cell_key_height;
 
 var grid;
 var grid_color = "rgb(0, 0, 0)";
 var cell_size = 25;
 var cell_gap = 2;
-// var num_of_rows = Math.floor(
-//   canvas_container.offsetHeight / (cell_size + cell_gap)
-// );
+var num_of_rows = Math.floor(canvas.height / (cell_size + cell_gap));
 var num_of_cols = Math.floor(
   canvas_container.offsetWidth / (cell_size + cell_gap) - 1
 );
-var num_of_rows = num_of_cols;
 var mouse_x;
 var mouse_y;
 var cell_changer = "barrier";
@@ -39,8 +40,8 @@ var ending_cell;
 var solving = false;
 var algo;
 
-canvas.height = num_of_rows * (cell_size + cell_gap) - cell_gap;
-canvas.width = num_of_cols * (cell_size + cell_gap) - cell_gap;
+canvas.width =
+  num_of_cols * (cell_size + cell_gap) - 3 * (cell_size + cell_gap);
 
 // Drawing event listeners
 canvas.addEventListener("mousedown", (m) => {

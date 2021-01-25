@@ -183,20 +183,24 @@ header {
   bottom: 6px;
 }
 
-/* Ga */
+/* Canvas */
 .cell_key {
   text-align: center;
   padding-bottom: 20px;
 }
 
+.canvas_container {
+  text-align: center;
+}
+
 .canvas {
   padding: 0;
   margin: auto;
-  display: block;
+  display: inline;
 }
 
 /* Drop Down */
-button {
+.cell_buttons button {
   background-color: #3498db;
   color: white;
   padding: 16px;
@@ -210,8 +214,8 @@ button {
   margin-left: 5px;
 }
 
-button:hover,
-button:focus {
+.cell_buttons button:hover,
+.cell_buttons button:focus {
   background-color: #2980b9;
 }
 
