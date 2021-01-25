@@ -53,7 +53,6 @@ img {
 /* Typography */
 
 h1,
-h2,
 h3 {
   line-height: 1.5;
   margin: 0;
@@ -188,8 +187,37 @@ header {
   bottom: 6px;
 }
 
-/* Algo Drop Down */
-.cell_buttons button {
+/* Guide */
+.guide {
+  text-align: center;
+  margin: 50px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  padding-top: 10px;
+}
+
+h2 {
+  padding: auto;
+  border-bottom: 1px solid var(--clr-teal-light);
+  margin: 0px;
+  margin-bottom: 20px;
+}
+
+.guide_buttons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  margin: auto;
+  padding-bottom: 20px;
+}
+
+.step_1,
+.step_2,
+.step_3,
+.step_4 {
+  white-space: nowrap;
+}
+
+.guide_buttons button {
   background-color: #3498db;
   color: white;
   padding: 16px;
@@ -200,19 +228,19 @@ header {
   margin-bottom: 10px;
 }
 
-.cell_button + .cell_button {
+.guide_button + .guide_button {
   margin-left: 5px;
 }
 
-.cell_buttons button:hover,
-.cell_buttons button:focus {
+.guide_buttons button:hover,
+.guide_buttons button:focus {
   background-color: #2980b9;
 }
 
+/* Algo Drop Down */
 .dropdown {
   position: relative;
   display: inline-block;
-  margin-left: 50px;
   margin-right: 5px;
 }
 
@@ -233,6 +261,7 @@ header {
   padding: 12px 16px;
   text-decoration: none;
   display: block;
+  margin: 0;
 }
 
 .dropdown-content button:hover {
@@ -244,11 +273,6 @@ header {
 }
 
 /* Canvas */
-.cell_key {
-  text-align: center;
-  padding-bottom: 20px;
-}
-
 .canvas_container {
   text-align: center;
   margin-bottom: 50px;

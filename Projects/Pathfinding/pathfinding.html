@@ -25,7 +25,7 @@
   rel="stylesheet"
   />
 
-  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="./pathfinding.css" />
 </head>
 <body>
   <header id="header" class="header">
@@ -53,28 +53,38 @@
       </ul>
     </nav>
   </header>
-  <div id="cell_key" class="cell_key">
-    <div>
-      <h2>Change cell type:</h2>
-      <div class="cell_buttons">
-        <button id="start" class="cell_button">Start</button>
-        <button id="end" class="cell_button">Finish</button>
-        <button id="barrier" class="cell_button">Wall</button>
-        <button id="random-barriers" class="cell_button">Throw Walls</button>
-        <button id="reset_cell" class="cell_button">Eraser</button>
-        <button id="clear" class="cell_button">New Grid</button>
-        <div class="dropdown">
-          <button id="algos" class="dropbtn">Choose Algorithm</button>
-          <div id="myDropdown" class="dropdown-content">
-            <button id="A*">A*</button>
-            <button id="BFS">Breadth First Search</button>
-            <button id="Dijkstra">Dijkstra's</button>
-          </div>
+  <section id="guide" class="guide">
+      <h2>Pathfinding Visualizer</h2>
+      <div class="guide_buttons">
+        <div class="step_1">
+          <h3>Step 1: Add a Start and Finish</h3>
+          <button id="start" class="guide_button">Start</button>
+          <button id="end" class="guide_button">Finish</button>
         </div>
-        <button id="solve" class="cell_button">Solve</button>
+        <div class="step_2">
+          <h3>Step 2: Add Walls</h3>
+          <button id="barrier" class="guide_button">Wall</button>
+          <button id="random-barriers" class="guide_button">Throw Walls</button>
+        </div>
+        <div class="step_3">
+          <h3>Step 3: Choose an Algorithm</h3>
+          <div class="dropdown">
+            <button id="algos" class="dropbtn">Choose Algorithm</button>
+            <div id="myDropdown" class="dropdown-content">
+              <button id="A*" class="">A*</button>
+              <button id="BFS">Breadth First Search</button>
+              <button id="Dijkstra">Dijkstra's</button>
+            </div>
+          </div>
+          <button id="solve" class="guide_button">Solve</button>
+        </div>
+        <div class="step_4">
+          <h3>Additional tools</h3>
+          <button id="reset_cell" class="guide_button">Eraser</button>
+          <button id="clear" class="guide_button">New Grid</button>
+        </div>
       </div>
-    </div>
-  </div>
+  </section>
   <div id="canvas-container" class="canvas_container">
     <canvas class="canvas"></canvas>
   </div>

@@ -31,7 +31,7 @@ class Star {
       y: 1,
     };
     this.cor = 0.75;
-    this.gravity = 0.1;
+    this.gravity = canvas.height / 7500;
   }
 
   draw() {
@@ -86,11 +86,11 @@ class MiniStar {
     this.y = y;
     this.radius = radius;
     this.velocity = {
-      x: randomIntFromRange(-5, 5),
-      y: randomIntFromRange(-15, 15),
+      x: randomIntFromRange(-2, 2),
+      y: randomIntFromRange(-7, 7),
     };
     this.cor = 0.8;
-    this.gravity = 1;
+    this.gravity = canvas.height / 5000;
     this.ttl = 200;
     this.opacity = 1;
   }

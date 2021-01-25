@@ -17,10 +17,10 @@ const canvas = document.querySelector("canvas");
 const c = canvas.getContext("2d");
 var canvas_container = document.getElementById("canvas-container");
 var header_height = document.getElementById("header").offsetHeight;
-var cell_key_height = document.getElementById("cell_key").offsetHeight;
+var guide_height = document.getElementById("guide").offsetHeight;
 
-canvas.height = window.innerHeight - header_height - cell_key_height;
-console.log(canvas.height, window.innerHeight, header_height, cell_key_height);
+canvas.height = window.innerHeight - header_height - guide_height;
+console.log(canvas.height, window.innerHeight, header_height, guide_height);
 
 var grid;
 var grid_color = "rgb(0, 0, 0)";
@@ -41,8 +41,7 @@ var ending_cell;
 var solving = false;
 var algo;
 
-canvas.height =
-  num_of_rows * (cell_size + cell_gap) - 2 * (cell_size + cell_gap);
+canvas.height = num_of_rows * (cell_size + cell_gap);
 canvas.width =
   num_of_cols * (cell_size + cell_gap) - 3 * (cell_size + cell_gap);
 
