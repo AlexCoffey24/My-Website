@@ -1,7 +1,30 @@
 <!DOCTYPE html>
 <head>
   <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" , initial-scale="1.0" />
   <title>A* Pathfinding</title>
+
+  <!-- Normalize Browser and import FA -->
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css"
+  integrity="sha512-ymdTQyUk0UfVv71LHB/INBdluI7qg0WKX5Wy9DZNsYcliOVveSy42TBPcgbhm/RSsIHLj+3YlAfDL+/WgBMaIA=="
+  crossorigin="anonymous"
+  />
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.css"
+  integrity="sha512-f73UKwzP1Oia45eqHpHwzJtFLpvULbhVpEJfaWczo/ZCV5NWSnK4vLDnjTaMps28ocZ05RbI83k2RlQH92zy7A=="
+  crossorigin="anonymous"
+  />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link
+  href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;900&family=Source+Sans+Pro:wght@300;900&display=swap"
+  rel="stylesheet"
+  />
+
   <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
@@ -9,7 +32,7 @@
     <div class="logo">
       <img src="../../images/Profile Pics/bitmoji_mountain.png" alt="" />
     </div>
-    <h4 class="page__title">HOME</h4>
+    <h4 class="page__title">PATHFINDING</h4>
     <button class="nav-toggle" aria-label="toggle navigation">
       <span class="hamburger"></span>
     </button>
@@ -32,7 +55,7 @@
   </header>
   <div id="cell_key" class="cell_key">
     <div>
-      <h1>Change cell type:</h1>
+      <h2>Change cell type:</h2>
       <div class="cell_buttons">
         <button id="start" class="cell_button">Start</button>
         <button id="end" class="cell_button">Finish</button>
@@ -55,5 +78,39 @@
   <div id="canvas-container" class="canvas_container">
     <canvas class="canvas"></canvas>
   </div>
+  <footer class="footer">
+    <ul class="email">
+      <a 
+        href="mailto:alexcoffey24@gmail.com" 
+        class="footer__link"
+        ></i
+      >alexcoffey24@gmail.com</a>
+    </ul>
+    <ul class="social-list">
+      <li class="social-list__item">
+        <a
+          href="https://www.youtube.com/channel/UCDxmRAG97l_nUTNLt1VQGaQ" 
+          target="_blank"
+          class="social-list__link"
+          ><i class="fab fa-youtube-square"></i
+        ></a>
+      </li>
+      <li class="social-list__item">
+        <a href="https://github.com/AlexCoffey24" 
+        target='_blank' 
+        class="social-list__link"
+          ><i class="fab fa-github"></i
+        ></a>
+      </li>
+      <li class="social-list__item">
+        <a
+          href="https://linkedin.com/in/alex-coffey-362904137" 
+          target="_blank"
+          class="social-list__link"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+      </li>
+    </ul>
+  </footer>
   <script src="./pathfinding.js"></script>
 </body>

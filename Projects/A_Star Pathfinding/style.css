@@ -45,12 +45,17 @@ body {
   line-height: 1.6;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+}
+
 /* Typography */
 
-/* h1,
+h1,
 h2,
 h3 {
-  line-height: 1.1;
+  line-height: 1.5;
   margin: 0;
 }
 
@@ -65,7 +70,7 @@ h3 {
 }
 h4 {
   font-size: var(--fs-h4);
-} */
+}
 
 /* Header */
 
@@ -183,23 +188,7 @@ header {
   bottom: 6px;
 }
 
-/* Canvas */
-.cell_key {
-  text-align: center;
-  padding-bottom: 20px;
-}
-
-.canvas_container {
-  text-align: center;
-}
-
-.canvas {
-  padding: 0;
-  margin: auto;
-  display: inline;
-}
-
-/* Drop Down */
+/* Algo Drop Down */
 .cell_buttons button {
   background-color: #3498db;
   color: white;
@@ -208,6 +197,7 @@ header {
   border: none;
   cursor: pointer;
   min-width: 6rem;
+  margin-bottom: 10px;
 }
 
 .cell_button + .cell_button {
@@ -251,4 +241,66 @@ header {
 
 .show {
   display: block;
+}
+
+/* Canvas */
+.cell_key {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.canvas_container {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.canvas {
+  padding: 0;
+  margin: auto;
+  display: inline;
+}
+
+/* Footer */
+
+.footer {
+  background: #111;
+  color: var(--clr-teal-light);
+  text-align: center;
+  padding: 2.5em 0;
+  font-size: var(--fs-h3);
+}
+
+.footer a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.email {
+  text-align: center;
+  padding-left: 0;
+}
+
+.footer__link {
+  font-weight: var(--fw-bold);
+}
+
+.footer__link:hover,
+.social-list__link:hover {
+  opacity: 0.7;
+}
+
+.social-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 2em 0 0;
+  padding: 0;
+}
+
+.social-list__item {
+  margin: 0 0.5em;
+}
+
+.social-list__link {
+  padding: 0.5em;
 }
