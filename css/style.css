@@ -410,20 +410,9 @@ header {
   text-align: center;
 }
 
-.about__link {
-  color: var(--clr-teal-light);
-  text-decoration: none;
-}
-
 .section__title--about {
   color: var(--clr-teal-light);
   position: relative;
-  transition: transform 200ms ease-in-out;
-}
-
-.section__title--about:hover {
-  cursor: pointer;
-  transform: scale(1.1);
 }
 
 .section__title--about::after {

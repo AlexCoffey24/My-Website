@@ -20,7 +20,6 @@ var header_height = document.getElementById("header").offsetHeight;
 var guide_height = document.getElementById("guide").offsetHeight;
 
 canvas.height = window.innerHeight - header_height - guide_height;
-console.log(canvas.height, window.innerHeight, header_height, guide_height);
 
 var grid;
 var grid_color = "rgb(0, 0, 0)";
@@ -294,19 +293,19 @@ function change_cell(x, y) {
     if (cell_changer == "reset") {
       if (grid[row][col].is_start()) {
         start_set = false;
-        starting_cell = null;
+        starting_cell = undefined;
       } else if (grid[row][col].is_end()) {
         end_set = false;
-        ending_cell = null;
+        ending_cell = undefined;
       }
       grid[row][col].reset();
     } else if (cell_changer == "barrier") {
       if (grid[row][col].is_start()) {
         start_set = false;
-        starting_cell = null;
+        starting_cell = undefined;
       } else if (grid[row][col].is_end()) {
         end_set = false;
-        ending_cell = null;
+        ending_cell = undefined;
       }
       grid[row][col].make_barrier();
     } else if (cell_changer == "start") {
@@ -333,7 +332,8 @@ function clear_grid() {
     draw_grid();
     start_set = false;
     end_set = false;
-    starting_cell = null;
+    starting_cell = undefined;
+    ending_cell = undefined;
     solving = false;
     cell_changer = "barrier";
   }
@@ -348,36 +348,42 @@ draw_grid();
 
 var open_set;
 function algorithm() {
-  // Update all cell neighbors
-  for (i = 0; i < num_of_rows; i++) {
-    for (j = 0; j < num_of_cols; j++) {
-      let cell = grid[i][j];
-      cell.update_neighbors();
-    }
-  }
-
-  if (algo == "A*") {
-    solving = true;
-    open_set = [];
-    open_set.push(starting_cell);
-    starting_cell.g = 0;
-    starting_cell.update_h();
-    starting_cell.update_f();
-
-    a_star();
-  } else if (algo == "BFS") {
-    solving = true;
-    open_set = [];
-    open_set.push(starting_cell);
-    bfs();
-  } else if (algo == "Dijkstra") {
-    solving = true;
-    solving = true;
-    open_set = [];
-    open_set.push(starting_cell);
-    dijkstra();
+  if (starting_cell == undefined) {
+    alert("Add a Start");
+  } else if (ending_cell == undefined) {
+    alert("Add a Finish");
   } else {
-    console.error("no algo selected");
+    // Update all cell neighbors
+    for (i = 0; i < num_of_rows; i++) {
+      for (j = 0; j < num_of_cols; j++) {
+        let cell = grid[i][j];
+        cell.update_neighbors();
+      }
+    }
+
+    if (algo == "A*") {
+      solving = true;
+      open_set = [];
+      open_set.push(starting_cell);
+      starting_cell.g = 0;
+      starting_cell.update_h();
+      starting_cell.update_f();
+
+      a_star();
+    } else if (algo == "BFS") {
+      solving = true;
+      open_set = [];
+      open_set.push(starting_cell);
+      bfs();
+    } else if (algo == "Dijkstra") {
+      solving = true;
+      solving = true;
+      open_set = [];
+      open_set.push(starting_cell);
+      dijkstra();
+    } else {
+      alert("Please Select an Algorithm");
+    }
   }
 }
 
