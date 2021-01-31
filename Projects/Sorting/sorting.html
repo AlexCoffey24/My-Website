@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sorting Visualizer</title>
+    <link rel="stylesheet" href="./sorting.css" />
+  </head>
+  <body>
+    <section id="guide" class="guide">
+      <h2>Pathfinding Visualizer</h2>
+      <div class="guide_buttons">
+        <div class="step_4">
+          <h3>Create a New Array</h3>
+          <button id="new" class="guide_button">New Array</button>
+        </div>
+        <div class="step_1">
+          <h3>Number of Icicles</h3>
+          <input type="range" />
+        </div>
+        <div class="step_3">
+          <h3>Choose an Algorithm</h3>
+          <div class="dropdown">
+            <button id="algos" class="dropbtn">Choose Algorithm</button>
+            <div id="myDropdown" class="dropdown-content">
+              <button id="bubble" class="">Bubble Sort</button>
+              <button id="insertion">Insertion Sort</button>
+              <button id="select">Selection Sort</button>
+            </div>
+          </div>
+          <button id="solve" class="guide_button">Solve</button>
+        </div>
+      </div>
+    </section>
+    <section id="canvas-container" class="canvas_container">
+      <canvas class="canvas"></canvas>
+    </section>
+    <script src="./sorting.js"></script>
+  </body>
+</html>
