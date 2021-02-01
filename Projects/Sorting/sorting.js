@@ -60,6 +60,15 @@ function change_to_select() {
   algo = "select";
 }
 
+document
+  .getElementById("number")
+  .addEventListener("input", change_number_of_icicles);
+function change_number_of_icicles() {
+  num_of_icicles = document.getElementById("number").value;
+  icicle_width = (canvas.width - num_of_icicles * icicle_gap) / num_of_icicles;
+  new_icicles();
+}
+
 const canvas = document.querySelector("canvas");
 const c = canvas.getContext("2d");
 const canvas_container = document.getElementById("canvas-container");
@@ -69,9 +78,10 @@ canvas.width = 1210;
 
 var icicles = [];
 var icicle_heights;
-var icicle_width = 40;
-var icicle_gap = 10;
-var num_of_icicles = Math.floor(canvas.width / (icicle_gap + icicle_width));
+var num_of_icicles = document.getElementById("number").value;
+var icicle_gap = 8;
+var icicle_width =
+  (canvas.width - num_of_icicles * icicle_gap) / num_of_icicles;
 var algo;
 var sorting = false;
 var is_sorted = false;
