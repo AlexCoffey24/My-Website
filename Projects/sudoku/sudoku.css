@@ -438,7 +438,7 @@ p.incorrect {
 
 .bottom_sudoku_buttons {
   text-align: center;
-  margin-bottom: 2em;
+  margin-bottom: 5em;
 }
 
 .sudoku_button {
@@ -453,6 +453,64 @@ p.incorrect {
 
 .sudoku_button:hover {
   cursor: pointer;
+}
+
+/* About */
+
+.project {
+  max-width: 700px;
+  margin: auto;
+  margin-bottom: 5em;
+  display: grid;
+  grid-template-areas:
+    "img title"
+    "img description"
+    "img description"
+    "img description";
+  grid-column-gap: 30px;
+  transition: transform 600ms cubic-bezier(0.5, 0, 0.5, 1), opacity 250ms linear;
+}
+
+.project_image_link {
+  overflow: hidden;
+  grid-area: img;
+  max-width: 200px;
+  justify-self: end;
+  background-color: var(--clr-teal-light);
+}
+
+.project_image {
+  transition: transform 600ms cubic-bezier(0.5, 0, 0.5, 1), opacity 250ms linear;
+}
+
+.project_image:hover {
+  transform: scale(1.2);
+  opacity: 0.25;
+}
+
+.title {
+  grid-area: title;
+  color: var(--clr-teal-light);
+  line-height: 0.5;
+  display: inline;
+  max-height: auto;
+  border-bottom: 1px solid var(--clr-teal-light);
+}
+
+.name {
+  line-height: 1.5;
+  font-size: 1.75rem;
+  color: var(--clr-teal-light);
+}
+
+.icon {
+  color: white;
+  font-size: var(--fs-h3);
+}
+
+.description {
+  grid-area: description;
+  align-self: start;
 }
 
 /* Footer */
