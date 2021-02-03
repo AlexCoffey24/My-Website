@@ -20,6 +20,9 @@ var header_height = document.getElementById("header").offsetHeight;
 var guide_height = document.getElementById("guide").offsetHeight;
 
 canvas.height = window.innerHeight - header_height - guide_height;
+if (canvas.height < 405) {
+  canvas.height = 405;
+}
 
 var grid;
 var grid_color = "rgb(0, 0, 0)";
