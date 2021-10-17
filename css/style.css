@@ -279,6 +279,7 @@ header {
 
 .intro__image {
   display: none;
+  padding-right: 30px;
 }
 
 .resume-btn {
@@ -502,8 +503,17 @@ header {
   }
 
   .service {
-    max-width: 500px;
+    width: 300px;
     margin: 0 auto;
+    text-align: left;
+  }
+
+  .service h3 {
+    text-align: center;
+  }
+
+  .service h5 {
+    text-align: center;
   }
 }
 
